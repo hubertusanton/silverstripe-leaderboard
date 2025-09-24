@@ -8,7 +8,8 @@ use Hubertusanton\Leaderboard\Service\LeaderboardService;
 
 class SiteTreeLeaderboardExtension extends DataExtension
 {
-    public function onAfterWrite()
+
+    public function onBeforeWrite()
     {
         $member = Security::getCurrentUser();
         if (!$member) {
@@ -20,10 +21,20 @@ class SiteTreeLeaderboardExtension extends DataExtension
         // Check if this is a new record (page creation)
         if (!$this->owner->isInDB()) {
             $service->awardPoints('page_creation', $member);
-        } else {
-            // This is an edit
-            $service->awardPoints('page_edit', $member);
         }
+
+    }
+
+    public function onAfterWrite()
+    {
+        $member = Security::getCurrentUser();
+        if (!$member) {
+            return;
+        }
+
+        $service = LeaderboardService::singleton();
+
+        $service->awardPoints('page_edit', $member);
     }
 
     public function onAfterPublish()
