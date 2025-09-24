@@ -21,11 +21,9 @@ class LeaderBoardAdmin extends ModelAdmin
 
     private static $url_segment = 'leaderboard';
 
-    private static $menu_icon_class = 'font-icon-trophy';
+    private static $menu_icon_class = 'font-icon-rocket';
 
     private static $menu_title = 'Leaderboard';
-
-    private static $model_importers = [];
 
     public function getEditForm($id = null, $fields = null)
     {

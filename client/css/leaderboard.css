@@ -1,0 +1,141 @@
+/* Leaderboard Styles */
+.leaderboard-container {
+    padding: 20px;
+}
+
+.leaderboard-title {
+    margin-bottom: 30px;
+    color: #3276b1;
+}
+
+.leaderboard-empty {
+    color: #666;
+    font-style: italic;
+}
+
+.leaderboard-table {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.leaderboard-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.leaderboard-table thead {
+    background: #f8f9fa;
+    border-bottom: 2px solid #dee2e6;
+}
+
+.leaderboard-table th {
+    padding: 15px;
+    text-align: left;
+    font-weight: 600;
+}
+
+.leaderboard-table th.center {
+    text-align: center;
+}
+
+.leaderboard-table tbody tr {
+    border-bottom: 1px solid #dee2e6;
+}
+
+.leaderboard-table tbody tr.top-three {
+    background: linear-gradient(45deg, rgba(255, 215, 0, 0.05), rgba(255, 255, 255, 1));
+}
+
+.leaderboard-table td {
+    padding: 12px;
+}
+
+.leaderboard-table td.center {
+    text-align: center;
+}
+
+.leaderboard-table td.user-name {
+    font-weight: 500;
+}
+
+.leaderboard-table td.level {
+    font-size: 14px;
+}
+
+.leaderboard-table td.score {
+    text-align: center;
+    font-weight: bold;
+    color: #28a745;
+}
+
+/* Rank styling */
+.rank-gold {
+    color: #FFD700;
+    font-weight: bold;
+}
+
+.rank-silver {
+    color: #C0C0C0;
+    font-weight: bold;
+}
+
+.rank-bronze {
+    color: #CD7F32;
+    font-weight: bold;
+}
+
+/* Stats Dashboard */
+.leaderboard-stats {
+    margin-top: 30px;
+    display: flex;
+    gap: 20px;
+}
+
+.stat-card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    text-align: center;
+}
+
+.stat-card h3 {
+    margin: 0 0 10px 0;
+    color: #3276b1;
+}
+
+.stat-card p {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.stat-card.users p {
+    color: #28a745;
+}
+
+.stat-card.score p {
+    color: #ff6b35;
+}
+
+.stat-card.pages p {
+    color: #6f42c1;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .leaderboard-stats {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .leaderboard-table {
+        overflow-x: auto;
+    }
+
+    .leaderboard-table table {
+        min-width: 600px;
+    }
+}
