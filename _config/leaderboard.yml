@@ -1,0 +1,16 @@
+---
+Name: leaderboard
+After:
+  - '#coreconfig'
+---
+SilverStripe\Security\Member:
+  extensions:
+    - Hubertusanton\Leaderboard\Extension\MemberLeaderboardExtension
+
+SilverStripe\CMS\Model\SiteTree:
+  extensions:
+    - Hubertusanton\Leaderboard\Extension\SiteTreeLeaderboardExtension
+
+SilverStripe\Core\Injector\Injector:
+  Hubertusanton\Leaderboard\Service\LeaderboardService:
+    class: Hubertusanton\Leaderboard\Service\LeaderboardService
