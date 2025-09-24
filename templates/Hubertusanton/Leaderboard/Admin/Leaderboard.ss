@@ -28,7 +28,7 @@
                         </td>
                         <td class="user-name">$Name</td>
                         <td class="level">$Level</td>
-                        <td class="score">$TotalScore.Nice</td>
+                        <td class="score">$TotalScore</td>
                         <td class="center">$PageCreations</td>
                         <td class="center">$PageEdits</td>
                         <td class="center">$BadgeCount</td>
@@ -54,11 +54,11 @@
         </div>
         <div class="stat-card score">
             <h3>🏆 Total Points</h3>
-            <p>$Stats.TotalScore.Nice</p>
+            <p>$Stats.TotalScore</p>
         </div>
         <div class="stat-card pages">
             <h3>📄 Pages Created</h3>
-            <p>$Stats.TotalPages.Nice</p>
+            <p>$Stats.TotalPages</p>
         </div>
     </div>
 </div>

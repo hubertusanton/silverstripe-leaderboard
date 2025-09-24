@@ -12,14 +12,14 @@ use Hubertusanton\Leaderboard\Model\UserBadge;
 class MemberLeaderboardExtension extends DataExtension
 {
     private static $db = [
-        'TotalScore' => 'Int',
-        'PageCreations' => 'Int',
-        'PageEdits' => 'Int',
+        'TotalScore'       => 'Int',
+        'PageCreations'    => 'Int',
+        'PageEdits'        => 'Int',
         'PagePublications' => 'Int',
-        'PageDeletions' => 'Int',
-        'LastActivity' => 'Datetime',
-        'CurrentStreak' => 'Int', // Days of consecutive activity
-        'LongestStreak' => 'Int'
+        'PageDeletions'    => 'Int',
+        'LastActivity'     => 'Datetime',
+        'CurrentStreak'    => 'Int', // Days of consecutive activity
+        'LongestStreak'    => 'Int'
     ];
 
     private static $has_many = [
@@ -27,12 +27,12 @@ class MemberLeaderboardExtension extends DataExtension
     ];
 
     private static $level_thresholds = [
-        0 => 'CMS Newbie 🥺',
-        50 => 'Page Padawan 🤓',
-        150 => 'Content Conjurer 🪄',
-        300 => 'Edit Enthusiast ✨',
-        500 => 'Publishing Pro 🚀',
-        750 => 'CMS Champion 👑',
+        0    => 'CMS Newbie 🥺',
+        50   => 'Page Padawan 🤓',
+        150  => 'Content Conjurer 🪄',
+        300  => 'Edit Enthusiast ✨',
+        500  => 'Publishing Pro 🚀',
+        750  => 'CMS Champion 👑',
         1000 => 'Digital Deity 🌟',
         1500 => 'Website Wizard 🧙‍♂️',
         2000 => 'Content Overlord 👹',
@@ -78,9 +78,9 @@ class MemberLeaderboardExtension extends DataExtension
         foreach ($levels as $threshold => $level) {
             if ($this->owner->TotalScore < $threshold) {
                 return [
-                    'level' => $level,
+                    'level'     => $level,
                     'threshold' => $threshold,
-                    'needed' => $threshold - $this->owner->TotalScore
+                    'needed'    => $threshold - $this->owner->TotalScore
                 ];
             }
         }
