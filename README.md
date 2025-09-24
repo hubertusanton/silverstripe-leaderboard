@@ -1,5 +1,7 @@
 # SilverStripe Leaderboard 🏆
 
+This module is created on the Stripecon 2025 HackDay by acronica team
+
 A gamification module for SilverStripe CMS that adds scoring, levels, and badges for CMS users. Transform content creation into an engaging experience!
 
 ## Features
